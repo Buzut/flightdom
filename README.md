@@ -1,6 +1,6 @@
 # ƒlightDom
 
-ƒlightDom, short for functional light DOM, is a super lightweight functional API to work with the DOM.
+ƒlightDom, short for _functional light DOM_, is a super lightweight functional API to work with the DOM.
 
 * [Why](#why)
 * [Getting started](#usage)
@@ -17,7 +17,7 @@ Moreover, it doesn't play nice with functional programming. That's exactly what 
 See for yourself:
 
 ```
-import { find, findAll, addClass, onAll } from 'flight-dom';
+import { find, findAll, addClass, onAll } from 'flightdom';
 
 const lightbox = find('.lightbox');
 addClass(lightbox, 'active');
@@ -35,7 +35,7 @@ Now if you insist, here's how wonderful it can get with some of Ramda's magic. L
 ```
 import partialRight from 'ramda/es/partialRight';
 import unary from 'ramda/es/unary';
-import { find, addClass, removeClass, onAll } from 'flight-dom';
+import { find, addClass, removeClass, onAll } from 'flightdom';
 
 /**
  * Init tabs
@@ -83,7 +83,7 @@ import * from 'flight-dom';
 
 // or
 
-import { find, findAll, … } from 'flight-dom'; // this is the preferred way
+import { find, findAll, … } from 'flightdom'; // this is the preferred way
 ```
 
 The last exemple is the preferred method because you'll take advantage of tree shaking and you benefit from unprefixed function names.
