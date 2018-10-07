@@ -1,5 +1,5 @@
 {
-  "name": "ƒdom",
+  "name": "fdom",
   "version": "1.0.0",
   "description": "ƒdom is a super lightweight functional API to work with the DOM.",
   "scripts": {
