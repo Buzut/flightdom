@@ -1,21 +1,22 @@
 {
-  "name": "fdom",
+  "name": "flightdom",
   "version": "1.0.0",
-  "description": "ƒdom is a super lightweight functional API to work with the DOM.",
+  "description": "ƒlightDom is a super lightweight functional API to work with the DOM.",
   "scripts": {
     "docs": "jsdoc src -R README.md -d docs",
     "build": "rollup -c",
     "prepublishOnly": "npm run build"
   },
+  "homepage": "https://buzut.github.io/flightdom/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Buzut/fdom.git"
+    "url": "https://github.com/Buzut/flightdom.git"
   },
   "keywords": [],
   "author": "Buzut (https://buzut.fr)",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/Buzut/resizeimg/issues"
+    "url": "https://github.com/Buzut/flightdom/issues"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
