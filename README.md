@@ -1,18 +1,23 @@
-# ƒdom
-ƒdom, or functional dom, is a super lightweight functional API to work with the DOM.
+# ƒlightDom
+
+ƒlightDom, short for functional light DOM, is a super lightweight functional API to work with the DOM.
+
+* [Why](#why)
+* [Getting started](#usage)
+* [API documentation](https://buzut.github.io/flightdom/global.html)
 
 ## <name id="why"/> Why use it?
 Let's admit it, we've dropped jQuery but we sometimes miss it. DOM's native API is very verbose and cumbersome to work with.
 
 Moreover, it doesn't play nice with functional programming. That's exactly what this library aims at: providing a light and functional way to work with the DOM.
 
-ƒdom works really well with [Ramda](https://ramdajs.com/). But fear not, there's no need to be a functional programmer to enjoy its ease of use. And let's face it, it's more about convenience than pure functional programming, we're mutating the DOM.
+ƒlightDom works really well with [Ramda](https://ramdajs.com/). But fear not, there's no need to be a functional programmer to enjoy its ease of use. And let's face it, it's more about convenience than pure functional programming, we're mutating the DOM.
 
 ### <name id="simple"/> Super simple
 See for yourself:
 
 ```
-import { find, findAll, addClass, onAll } from 'ƒdom';
+import { find, findAll, addClass, onAll } from 'flight-dom';
 
 const lightbox = find('.lightbox');
 addClass(lightbox, 'active');
@@ -30,7 +35,7 @@ Now if you insist, here's how wonderful it can get with some of Ramda's magic. L
 ```
 import partialRight from 'ramda/es/partialRight';
 import unary from 'ramda/es/unary';
-import { find, addClass, removeClass, onAll } from 'ƒdom';
+import { find, addClass, removeClass, onAll } from 'flight-dom';
 
 /**
  * Init tabs
@@ -53,23 +58,32 @@ function initTabs(panelTabs, panels) {
 }
 ```
 
-Again, no worries if functional flavor is not your cup of tea. ƒdom is built to accomodate everyone's taste.
+Again, no worries if functional flavor is not your cup of tea. ƒlightDom is built to accomodate everyone's taste.
 
 This is the reason why it only involves simple functions, without making them overly functional. Just good ol' functions, ready to be used in whatever flavor you like them most.
 
 No built-in currying or data last, but ready to be augmented!
 
 ## <name id="usage"/> Usage
+
+You install it through npm like so:
+
+```
+npm install --save flightdom
+```
+
 You might have noticed, the library is an ES module, nevertheless it also supports CommonJS. So you can either `import` or `require` with the tool of your choice.
 
 ```
-const ƒdom = require('ƒdom');
+const fdom = require('flight-dom');
 
 // or
 
-import * from 'ƒdom';
+import * from 'flight-dom';
 
 // or
 
-import { find, findAll, … } from 'ƒdom'; // this is the preferred way
+import { find, findAll, … } from 'flight-dom'; // this is the preferred way
 ```
+
+The last exemple is the preferred method because you'll take advantage of tree shaking and you benefit from unprefixed function names.
