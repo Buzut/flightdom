@@ -1,6 +1,6 @@
 {
   "name": "flightdom",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ƒlightDom is a super lightweight functional API to work with the DOM.",
   "scripts": {
     "docs": "jsdoc src -R README.md -d docs",
@@ -12,7 +12,12 @@
     "type": "git",
     "url": "https://github.com/Buzut/flightdom.git"
   },
-  "keywords": [],
+  "keywords": [
+    "dom",
+    "functional",
+    "client",
+    "api"
+  ],
   "author": "Buzut (https://buzut.fr)",
   "license": "BSD-3-Clause",
   "bugs": {
@@ -27,3 +32,4 @@
     "rollup": "^0.62.0"
   }
 }
+
