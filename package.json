@@ -2,6 +2,12 @@
   "name": "flightdom",
   "version": "1.0.1",
   "description": "ƒlightDom is a super lightweight functional API to work with the DOM.",
+  "main": "lib/index.js",
+  "module": "src/index.js",
+  "files": [
+    "src",
+    "lib"
+  ],
   "scripts": {
     "docs": "jsdoc src -R README.md -d docs",
     "build": "rollup -c",
@@ -32,4 +38,3 @@
     "rollup": "^0.62.0"
   }
 }
-
