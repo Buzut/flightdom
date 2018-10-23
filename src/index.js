@@ -45,6 +45,16 @@ export function removeClass(el, className) {
 }
 
 /**
+ * Toggle a class on an element
+ * @param { HTMLElement } el
+ * @param { String } className
+ */
+export function toggleClass(el, className) {
+    if (hasClass(el, className)) removeClass(el, className);
+    else addClass(el, className);
+}
+
+/**
  * Check if an element has a given attribute
  * @param { HTMLElement } el
  * @param { String } attr
