@@ -94,6 +94,51 @@ export function removeAttribute(el, attr) {
 }
 
 /**
+ * Get text content of a node (use textContent)
+ * @param { HTMLElement } el
+ * @return { String }
+ */
+export function getText(el) {
+    return el.textContent;
+}
+
+/**
+ * Get a node's html
+ * @param { HTMLElement } el
+ * @return { String }
+ */
+export function getHTML(el) {
+    return el.innerHTML;
+}
+
+/**
+ * Get a node's html
+ * @param { HTMLElement } el
+ * @param { String } html
+ */
+export function setHTML(el, html) {
+    el.innerHTML = html;
+}
+
+/**
+ * Get an input/textarea's value
+ * @param { HTMLInputElement | HTMLTextAreaElement } el
+ * @return { String }
+ */
+export function getValue(el) {
+    return el.value;
+}
+
+/**
+ * Get an input/textarea's value
+ * @param { HTMLInputElement | HTMLTextAreaElement } el
+ * @param { String } val
+ */
+export function setValue(el, val) {
+    return el.value = val;
+}
+
+/**
  * Get the computed style for an element's style property
  * @param { HTMLElement } el
  * @param { String } proptName CSS property name
