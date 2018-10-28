@@ -130,12 +130,12 @@ export function getValue(el) {
 }
 
 /**
- * Get an input/textarea's value
+ * Set an input/textarea's value
  * @param { HTMLInputElement | HTMLTextAreaElement } el
  * @param { String } val
  */
 export function setValue(el, val) {
-    return el.value = val;
+    el.value = val;
 }
 
 /**
