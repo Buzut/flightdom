@@ -189,6 +189,16 @@ export function on(el, action, fn) {
 }
 
 /**
+ * Set an event listener that triggers once on an element
+ * @param { HTMLElement } el
+ * @param { String } action The event to listen to
+ * @param { Function } fn Function to execute when event triggers
+ */
+export function once(el, action, fn) {
+    el.addEventListener(action, fn, { once: true });
+}
+
+/**
  * Remove an event listener from an element
  * @param { HTMLElement } el
  * @param { String } action The event to listen to
