@@ -17,6 +17,26 @@ export function findAll(selector) {
 }
 
 /**
+ * Get the first matching child element
+ * @param { HTMLElement } el
+ * @param { String } selector CSS selector
+ * @return { HTMLElement }
+ */
+export function findChild(el, selector) {
+    return el.querySelector(selector);
+}
+
+/**
+ * Get all the matching children elements
+ * @param { HTMLElement } el
+ * @param { String } selector CSS selector
+ * @return { NodeList }
+ */
+export function findChildren(el, selector) {
+    return el.querySelectorAll(selector);
+}
+
+/**
  * Check if an element has a given class
  * @param { HTMLElement } el
  * @param { String } className
