@@ -37,6 +37,15 @@ export function findChildren(el, selector) {
 }
 
 /**
+ * Get the element's parent
+ * @param { HTMLElement } el
+ * @return { HTMLElement }
+ */
+export function getParent(el) {
+    return el.parentNode;
+}
+
+/**
  * Check if an element has a given class
  * @param { HTMLElement } el
  * @param { String } className
