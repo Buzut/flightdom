@@ -46,6 +46,24 @@ export function getParent(el) {
 }
 
 /**
+ * Get the element's previous sibling
+ * @param { HTMLElement } el
+ * @return { HTMLElement }
+ */
+export function getPrevious(el) {
+    return el.previousElementSibling;
+}
+
+/**
+ * Get the element's next sibling
+ * @param { HTMLElement } el
+ * @return { HTMLElement }
+ */
+export function getNext(el) {
+    return el.nextElementSibling;
+}
+
+/**
  * Check if an element has a given class
  * @param { HTMLElement } el
  * @param { String } className
