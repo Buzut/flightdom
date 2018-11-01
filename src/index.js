@@ -114,12 +114,21 @@ export function removeAttribute(el, attr) {
 }
 
 /**
- * Get text content of a node (use textContent)
+ * Get text content of a node (uses textContent)
  * @param { HTMLElement } el
  * @return { String }
  */
 export function getText(el) {
     return el.textContent;
+}
+
+/**
+ * Set text content of a node
+ * @param { HTMLElement } el
+ * @param { String } text
+ */
+export function setText(el, text) {
+    el.textContent = text;
 }
 
 /**
