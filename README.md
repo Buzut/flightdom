@@ -16,7 +16,7 @@ Moreover, it doesn't play nice with functional programming. That's exactly what 
 ### <name id="simple"/> Super simple
 See for yourself:
 
-```
+```js
 import { find, findAll, addClass, onAll } from 'flightdom';
 
 const lightbox = find('.lightbox');
@@ -32,7 +32,7 @@ See, it's super easy and straightforward. There's absolutely no functional shena
 ### <name id="powerful"/> And yet super powerful
 Now if you insist, here's how wonderful it can get with some of Ramda's magic. Let's say we're building a function to manage some tabbed navigation:
 
-```
+```js
 import partialRight from 'ramda/es/partialRight';
 import unary from 'ramda/es/unary';
 import { find, addClass, removeClass, onAll } from 'flightdom';
@@ -74,7 +74,7 @@ npm install --save flightdom
 
 You might have noticed, the library is an ES module, nevertheless it also supports CommonJS. So you can either `import` or `require` with the tool of your choice.
 
-```
+```js
 const fdom = require('flight-dom');
 
 // or
