@@ -9,6 +9,7 @@
     "lib"
   ],
   "scripts": {
+    "prepare": "test -d .git && cd .git/hooks/ && curl -O https://raw.githubusercontent.com/Buzut/git-emojis-hook/master/commit-msg && curl -O https://raw.githubusercontent.com/Buzut/git-emojis-hook/master/prepare-commit-msg && chmod +x *",
     "docs": "jsdoc src -R README.md -d docs",
     "build": "rollup -c",
     "prepublishOnly": "npm run build"
