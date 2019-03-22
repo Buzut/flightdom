@@ -64,6 +64,24 @@ export function getNext(el) {
 }
 
 /**
+ * Remove element from the DOM
+ * @param { HTMLElement } el
+ */
+export function remove(el) {
+    el.remove();
+}
+
+/**
+ * Remove child element from the DOM and return it
+ * @param { HTMLElement } parent
+ * @param { HTMLElement } child
+ * @return { HTMLElement }
+ */
+export function removeChild(parent, child) {
+    return parent.removeChild(child);
+}
+
+/**
  * Check if an element has a given class
  * @param { HTMLElement } el
  * @param { String } className
@@ -277,4 +295,12 @@ export function callFnWDomElsIfExist(fn, ...els) {
     });
 
     if (call) fn(...els);
+}
+
+/**
+ * Trigger a smooth scroll to element
+ * @param { HTMLElement } target
+ */
+export function smoothScrollTo(target) {
+    target.scrollIntoView({ behavior: 'smooth' });
 }
