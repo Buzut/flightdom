@@ -9,7 +9,7 @@
     "lib"
   ],
   "scripts": {
-    "prepare": "test -d .git && cd .git/hooks/ && curl -O https://raw.githubusercontent.com/Buzut/git-emojis-hook/master/commit-msg && curl -O https://raw.githubusercontent.com/Buzut/git-emojis-hook/master/prepare-commit-msg && chmod +x *",
+    "prepare": "test -d .git && cd .git/hooks/ && curl -O https://raw.githubusercontent.com/Buzut/git-emojis-hook/master/commit-msg && curl -O https://raw.githubusercontent.com/Buzut/git-emojis-hook/master/prepare-commit-msg && chmod +x * || exit 0",
     "docs": "jsdoc -t node_modules/minami src -R README.md -d docs",
     "build": "rollup -c",
     "prepublishOnly": "npm run build"
@@ -25,7 +25,7 @@
     "client",
     "api"
   ],
-  "author": "Buzut (https://buzut.fr)",
+  "author": "Buzut (https://buzut.net)",
   "license": "BSD-3-Clause",
   "bugs": {
     "url": "https://github.com/Buzut/flightdom/issues"
