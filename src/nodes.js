@@ -16,6 +16,17 @@ function append(parent, ...child) {
 }
 
 /**
+ * Clone the provided node
+ * @memberof Nodes
+ * @param { Node } el Node to be cloned
+ * @param { Bool } [shallow=false]
+ * @return { Node }
+ */
+function clone(el, shallow = false) {
+    return el.cloneNode(shallow);
+}
+
+/**
  * Create the HTML element specified by tagName
  * @memberof Nodes
  * @param { String } tagName The tag name of the element to create
@@ -130,6 +141,7 @@ function removeChild(parent, child) {
 
 export {
     append,
+    clone,
     create,
     insertHTML,
     find,
