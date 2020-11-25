@@ -93,3 +93,5 @@ There's sure room for improvement, so feel free to hack around and submit PRs!
 Please just follow the style of the existing code, which is [Airbnb's style](http://airbnb.io/javascript/) with [minor modifications](.eslintrc).
 
 To maintain things clear and visual, please follow the [git commit template](https://github.com/Buzut/git-emojis-hook).
+
+Exports must be grouped in a separate `export` statement rather than directly exporting functions with `export function myFunction` otherwise jsdoc renders them as `export.myFunction`.
