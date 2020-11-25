@@ -14,6 +14,16 @@ function click(el) {
 }
 
 /**
+  * Return target event
+  * @memberof Events
+  * @param { Event } e
+  * @return { EventTarget }
+  */
+function getEventTarget(e) {
+    return e.target;
+}
+
+/**
  * @summary Set an event listener on an element
  * @description Most of the time on, off, all and once will be used with one of Element, Window or XMLHttpRequest
  * But other DOM objects (like AudioContext) implement EventTarget interface (addEventListener is used under the hood) and can be valid parameters
@@ -75,6 +85,7 @@ function ready(fn) {
 
 export {
     click,
+    getEventTarget,
     on,
     once,
     off,
