@@ -64,11 +64,22 @@ function setValue(el, val) {
     el.value = val;
 }
 
+/**
+ * Get an input/textarea's value
+ * @memberof Values
+ * @param { HTMLInputElement } el HTML Input element of type checkbox or radio
+ * @return { Bool }
+ */
+function isChecked(el) {
+    return el.checked;
+}
+
 export {
     getText,
     setText,
     getHTML,
     setHTML,
     getValue,
-    setValue
+    setValue,
+    isChecked
 };
