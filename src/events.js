@@ -55,8 +55,8 @@ function once(el, action, fn) {
  * But other DOM objects (like AudioContext) implement EventTarget interface (addEventListener is used under the hood) and can be valid parameters
  * @memberof Events
  * @param { Element | Document | Window | XMLHttpRequest } el
- * @param { String } action The event to listen to
- * @param { Function } fn Function to execute when event triggers
+ * @param { String } action The event to remove
+ * @param { Function } fn Function to remove on the given event
  */
 function off(el, action, fn) {
     el.removeEventListener(action, fn);
