@@ -14,22 +14,6 @@ function click(el) {
 }
 
 /**
- * Create a debounced version of the passed function
- * @memberof Events
- * @param { Function } fn Function to debounce
- * @param { Integer } delay Delay after which it'll be executed after the last call to de debounced function
- * @return { Function } Debounced function
- */
-function debounce(fn, delay) {
-    let timeout;
-
-    return () => {
-        clearTimeout(timeout);
-        timeout = setTimeout(fn, delay);
-    };
-}
-
-/**
  * @summary Set an event listener on an element
  * @description Most of the time on, off, all and once will be used with one of Element, Window or XMLHttpRequest
  * But other DOM objects (like AudioContext) implement EventTarget interface (addEventListener is used under the hood) and can be valid parameters
@@ -89,42 +73,11 @@ function ready(fn) {
     else on(document, 'DOMContentLoaded', fn);
 }
 
-/**
- * Create a thottled version of the passed function
- * @memberof Events
- * @param { Function } fn Function to throttle
- * @param { Integer } delay Minimum allowed interval of time between two calls of the function
- * @return { Function } Throttled function
- */
-function throttle(delay, fn) {
-    let wait = false;
-    let toExec;
-
-    return () => {
-        if (wait) {
-            if (toExec) clearTimeout(toExec);
-
-            toExec = setTimeout(fn, delay);
-            return;
-        }
-
-        if (toExec) clearTimeout(toExec);
-        fn();
-        wait = true;
-
-        setTimeout(() => {
-            wait = false;
-        }, delay);
-    };
-}
-
 export {
     click,
-    debounce,
     on,
     once,
     off,
     onAll,
-    ready,
-    throttle
+    ready
 };
