@@ -5,6 +5,17 @@
  */
 
 /**
+ * Append one or more elements to a parent node
+ * @memberof Nodes
+ * @param { ParentNode } parent
+ * @param { ...Node | ...String } child
+ * @return { Node }
+ */
+function append(parent, ...child) {
+    return parent.append(child);
+}
+
+/**
  * Get the first matching element
  * @memberof Nodes
  * @param { String } selector CSS selector
@@ -97,6 +108,7 @@ function removeChild(parent, child) {
 }
 
 export {
+    append,
     find,
     findAll,
     findChild,
