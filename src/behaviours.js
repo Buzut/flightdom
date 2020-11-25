@@ -39,12 +39,27 @@ function debounce(fn, delay) {
 }
 
 /**
- * Trigger a smooth scroll to element
- * @param { Element } target
+ * Trigger scroll to coordinates relative to the element
+ * @param { Element } el Scroll to a particular set of coordinates inside a given element
+ * @param { Integer } left Number of pixels along the horizontal axis of the element that will be displayed in the upper left
+ * @param { Integer } top Number of pixels along the vertical axis of the element that will be displayed in the upper left
+ * @param { Bool } smooth Whether the scrolling should animate smoothly
  * @memberof Behaviours
  */
-function smoothScrollTo(target) {
-    target.scrollIntoView({ behavior: 'smooth' });
+function scrollIn(el, left, top, smooth) {
+    if (smooth) el.scrollTo({ left, top, behavior: 'smooth' });
+    else el.scrollTo();
+}
+
+/**
+ * Trigger scroll to the element
+ * @param { Element } el Scroll untill the element is at the top of the viewport (like clicking an anchor tag)
+ * @param { Bool } smooth Whether the scrolling should animate smoothly
+ * @memberof Behaviours
+ */
+function scrollTo(el, smooth) {
+    if (smooth) el.scrollIntoView({ behavior: 'smooth' });
+    else el.scrollIntoView();
 }
 
 /**
@@ -79,6 +94,7 @@ function throttle(delay, fn) {
 export {
     callFnWithElementsIfExist,
     debounce,
-    smoothScrollTo,
+    scrollIn,
+    scrollTo,
     throttle
 };
