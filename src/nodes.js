@@ -16,6 +16,16 @@ function append(parent, ...child) {
 }
 
 /**
+ * Create the HTML element specified by tagName
+ * @memberof Nodes
+ * @param { String } tagName The tag name of the element to create
+ * @return { Element }
+ */
+function create(tagName) {
+    return document.createElement(tagName);
+}
+
+/**
  * Insert an HTML string at "position" relative to the parent element
  * @memberof Nodes
  * @param { Element } el
@@ -120,6 +130,7 @@ function removeChild(parent, child) {
 
 export {
     append,
+    create,
     insertHTML,
     find,
     findAll,
