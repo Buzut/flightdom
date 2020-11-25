@@ -13,8 +13,8 @@ export function callFnWDomElsIfExist(fn, ...els) {
     let call = true;
 
     els.forEach((el) => {
-        if (NodeList.prototype.isPrototypeOf(el) && !el.length) call = false; // eslint-disable-line
-        else if (!el) call = false;
+        if (!el) call = false;
+        else if (NodeList.prototype.isPrototypeOf(el) && !el.length) call = false; // eslint-disable-line
     });
 
     if (call) fn(...els);
