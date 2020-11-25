@@ -14,6 +14,15 @@ function click(el) {
 }
 
 /**
+  * Set focus on the specified element
+  * @memberof Events
+  * @param { HTMLElement } el
+  */
+function focus(el) {
+    el.focus();
+}
+
+/**
   * Return target event
   * @memberof Events
   * @param { Event } e
@@ -105,6 +114,7 @@ function ready(fn) {
 
 export {
     click,
+    focus,
     getEventTarget,
     on,
     once,
