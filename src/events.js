@@ -74,6 +74,15 @@ function onAll(els, action, fn) {
 }
 
 /**
+  * Prevent default event from happening
+  * @memberof Events
+  * @param { Event } e
+  */
+function preventDefault(e) {
+    e.preventDefault();
+}
+
+/**
  * Trigger a function when DOM is ready
  * @memberof Events
  * @param { Function }
@@ -90,5 +99,6 @@ export {
     once,
     off,
     onAll,
+    preventDefault,
     ready
 };
