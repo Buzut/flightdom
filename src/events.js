@@ -89,6 +89,35 @@ function ready(fn) {
     else on(document, 'DOMContentLoaded', fn);
 }
 
+/**
+ * Create a thottled version of the passed function
+ * @memberof Events
+ * @param { Function } fn Function to throttle
+ * @param { Integer } delay Minimum allowed interval of time between two calls of the function
+ * @return { Function } Throttled function
+ */
+function throttle(delay, fn) {
+    let wait = false;
+    let toExec;
+
+    return () => {
+        if (wait) {
+            if (toExec) clearTimeout(toExec);
+
+            toExec = setTimeout(fn, delay);
+            return;
+        }
+
+        if (toExec) clearTimeout(toExec);
+        fn();
+        wait = true;
+
+        setTimeout(() => {
+            wait = false;
+        }, delay);
+    };
+}
+
 export {
     click,
     debounce,
@@ -96,5 +125,6 @@ export {
     once,
     off,
     onAll,
-    ready
+    ready,
+    throttle
 };
