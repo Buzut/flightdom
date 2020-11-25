@@ -16,6 +16,17 @@ function append(parent, ...child) {
 }
 
 /**
+ * Insert an HTML string at "position" relative to the parent element
+ * @memberof Nodes
+ * @param { Element } el
+ * @param { String("beforebegin", "afterbegin", "beforeend", "afterend") } position
+ * @param { String } text
+ */
+function insertHTML(el, position, text) {
+    el.insertAdjacentHTML(position, text);
+}
+
+/**
  * Get the first matching element
  * @memberof Nodes
  * @param { String } selector CSS selector
@@ -109,6 +120,7 @@ function removeChild(parent, child) {
 
 export {
     append,
+    insertHTML,
     find,
     findAll,
     findChild,
