@@ -5,6 +5,16 @@
  */
 
 /**
+ * Add a class to an element
+ * @memberof Attributes
+ * @param { Element } el
+ * @param { String } className
+ */
+function addClass(el, className) {
+    el.classList.add(className);
+}
+
+/**
  * Check if an element has a given class
  * @memberof Attributes
  * @param { Element } el
@@ -13,16 +23,6 @@
  */
 function hasClass(el, className) {
     return el.classList.contains(className);
-}
-
-/**
- * Add a class to an element
- * @memberof Attributes
- * @param { Element } el
- * @param { String } className
- */
-function addClass(el, className) {
-    el.classList.add(className);
 }
 
 /**
@@ -90,8 +90,8 @@ function removeAttribute(el, attr) {
 }
 
 export {
-    hasClass,
     addClass,
+    hasClass,
     removeClass,
     toggleClass,
     hasAttribute,
