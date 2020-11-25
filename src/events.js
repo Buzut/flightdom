@@ -5,6 +5,15 @@
  */
 
 /**
+  * Trigger a click event on the specified element
+  * @memberof Events
+  * @param { HTMLElement } el
+  */
+function click(el) {
+    el.click();
+}
+
+/**
  * Set an event listener on an element
  * @memberof Events
  * @param { HTMLElement } el
@@ -59,6 +68,7 @@ function ready(fn) {
 }
 
 export {
+    click,
     on,
     once,
     off,
