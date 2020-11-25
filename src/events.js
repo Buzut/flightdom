@@ -74,6 +74,17 @@ function onAll(els, action, fn) {
 }
 
 /**
+ * Remove an event listener from a collection of elements
+ * @memberof Events
+ * @param { Array.<Element | Document | Window | XMLHttpRequest> | NodeList.<Element | Document | Window | XMLHttpRequest> } els
+ * @param { String } action The event to remove
+ * @param { Function } fn Function to remove on the given event
+ */
+function offAll(els, action, fn) {
+    els.forEach(el => off(el, action, fn));
+}
+
+/**
   * Prevent default event from happening
   * @memberof Events
   * @param { Event } e
@@ -99,6 +110,7 @@ export {
     once,
     off,
     onAll,
+    offAll,
     preventDefault,
     ready
 };
