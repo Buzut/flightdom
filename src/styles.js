@@ -7,7 +7,7 @@
 /**
  * Get the computed style for an element's style property
  * @memberof Styles
- * @param { HTMLElement } el
+ * @param { Element } el
  * @param { String } proptName CSS property name
  * @return { String }
  */

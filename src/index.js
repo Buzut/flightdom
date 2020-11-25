@@ -22,7 +22,7 @@ export function callFnWDomElsIfExist(fn, ...els) {
 
 /**
  * Trigger a smooth scroll to element
- * @param { HTMLElement } target
+ * @param { Element } target
  */
 export function smoothScrollTo(target) {
     target.scrollIntoView({ behavior: 'smooth' });

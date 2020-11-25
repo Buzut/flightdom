@@ -14,9 +14,11 @@ function click(el) {
 }
 
 /**
- * Set an event listener on an element
+ * @summary Set an event listener on an element
+ * @description Most of the time on, off, all and once will be used with one of Element, Window or XMLHttpRequest
+ * But other DOM objects (like AudioContext) implement EventTarget interface (addEventListener is used under the hood) and can be valid parameters
  * @memberof Events
- * @param { HTMLElement } el
+ * @param { Element | Document | Window | XMLHttpRequest } el
  * @param { String } action The event to listen to
  * @param { Function } fn Function to execute when event triggers
  */
@@ -25,9 +27,11 @@ function on(el, action, fn) {
 }
 
 /**
- * Set an event listener that triggers once on an element
+ * @summary Set an event listener that triggers once on an element
+ * @description Most of the time on, off, all and once will be used with one of Element, Window or XMLHttpRequest
+ * But other DOM objects (like AudioContext) implement EventTarget interface (addEventListener is used under the hood) and can be valid parameters
  * @memberof Events
- * @param { HTMLElement } el
+ * @param { Element | Document | Window | XMLHttpRequest } el
  * @param { String } action The event to listen to
  * @param { Function } fn Function to execute when event triggers
  */
@@ -36,9 +40,11 @@ function once(el, action, fn) {
 }
 
 /**
- * Remove an event listener from an element
+ * @summary Remove an event listener from an element
+ * @description Most of the time on, off, all and once will be used with one of Element, Window or XMLHttpRequest
+ * But other DOM objects (like AudioContext) implement EventTarget interface (addEventListener is used under the hood) and can be valid parameters
  * @memberof Events
- * @param { HTMLElement } el
+ * @param { Element | Document | Window | XMLHttpRequest } el
  * @param { String } action The event to listen to
  * @param { Function } fn Function to execute when event triggers
  */
@@ -49,7 +55,7 @@ function off(el, action, fn) {
 /**
  * Set an event listener on a collection of elements
  * @memberof Events
- * @param { Array | NodeList } els
+ * @param { Array.<Element | Document | Window | XMLHttpRequest> | NodeList.<Element | Document | Window | XMLHttpRequest> } els
  * @param { String } action The event to listen to
  * @param { Function } fn Function to execute when event triggers
  */

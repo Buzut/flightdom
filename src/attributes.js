@@ -7,7 +7,7 @@
 /**
  * Check if an element has a given class
  * @memberof Attributes
- * @param { HTMLElement } el
+ * @param { Element } el
  * @param { String } className
  * @return { Bool }
  */
@@ -18,7 +18,7 @@ function hasClass(el, className) {
 /**
  * Add a class to an element
  * @memberof Attributes
- * @param { HTMLElement } el
+ * @param { Element } el
  * @param { String } className
  */
 function addClass(el, className) {
@@ -28,7 +28,7 @@ function addClass(el, className) {
 /**
  * Remove a class from an element
  * @memberof Attributes
- * @param { HTMLElement } el
+ * @param { Element } el
  * @param { String } className
  */
 function removeClass(el, className) {
@@ -38,7 +38,7 @@ function removeClass(el, className) {
 /**
  * Toggle a class on an element
  * @memberof Attributes
- * @param { HTMLElement } el
+ * @param { Element } el
  * @param { String } className
  */
 function toggleClass(el, className) {
@@ -49,7 +49,7 @@ function toggleClass(el, className) {
 /**
  * Check if an element has a given attribute
  * @memberof Attributes
- * @param { HTMLElement } el
+ * @param { Element } el
  * @param { String } attr
  * @return { Bool }
  */
@@ -60,7 +60,7 @@ function hasAttribute(el, attr) {
 /**
  * Get an attribute's value from an element
  * @memberof Attributes
- * @param { HTMLElement } el
+ * @param { Element } el
  * @param { String } attr The attribute's name
  * @return { String }
  */
@@ -71,7 +71,7 @@ function getAttribute(el, attr) {
 /**
  * Add or set an attribute on an element
  * @memberof Attributes
- * @param { HTMLElement } el
+ * @param { Element } el
  * @param { String } attr The attribute's name
  * @param { String } val The attribute's value
  */
@@ -82,7 +82,7 @@ function setAttribute(el, attr, val) {
 /**
  * Remove an attribute from an element
  * @memberof Attributes
- * @param { HTMLElement } el
+ * @param { Element } el
  * @param { String } attr The attribute's name
  */
 function removeAttribute(el, attr) {

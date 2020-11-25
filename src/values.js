@@ -7,7 +7,7 @@
 /**
  * Get text content of a node (uses textContent)
  * @memberof Values
- * @param { HTMLElement } el
+ * @param { Node } el
  * @return { String }
  */
 function getText(el) {
@@ -17,7 +17,7 @@ function getText(el) {
 /**
  * Set text content of a node
  * @memberof Values
- * @param { HTMLElement } el
+ * @param { Node } el
  * @param { String } text
  */
 function setText(el, text) {
@@ -27,7 +27,7 @@ function setText(el, text) {
 /**
  * Get a node's html
  * @memberof Values
- * @param { HTMLElement } el
+ * @param { Element } el
  * @return { String }
  */
 function getHTML(el) {
@@ -37,7 +37,7 @@ function getHTML(el) {
 /**
  * Get a node's html
  * @memberof Values
- * @param { HTMLElement } el
+ * @param { Element } el
  * @param { String } html
  */
 function setHTML(el, html) {
