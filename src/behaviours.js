@@ -50,6 +50,21 @@ function getUrl(pathName) {
 }
 
 /**
+ * Get a query parameter's value
+ * @memberof Behaviours
+ * @param { String } paramName Name of the parameter to get the value from
+ * @return { String }
+ */
+function getUrlParamValue(paramName) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get([paramName]);
+}
+
+function getUrlQueryString() {
+    return window.location.search;
+}
+
+/**
  * Navigate to a new page
  * @memberof Behaviours
  * @param { String } url
@@ -117,6 +132,7 @@ export {
     callFnWithElementsIfExist,
     debounce,
     getUrl,
+    getUrlParamValue,
     navigateTo,
     scrollIn,
     scrollTo,
