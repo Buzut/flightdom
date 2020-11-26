@@ -50,6 +50,24 @@ function getUrl(pathName) {
 }
 
 /**
+ * Get the viewport width
+ * @memberof Helpers
+ * @return { Number } Size in pixels
+ */
+export function getWindowWidth() {
+    return window.innerWidth;
+}
+
+/**
+ * Get the viewport height
+ * @memberof Helpers
+ * @return { Number } Size in pixels
+ */
+export function getWindowHeight() {
+    return window.innerWidth;
+}
+
+/**
  * Get a query parameter's value
  * @memberof Helpers
  * @param { String } paramName Name of the parameter to get the value from
