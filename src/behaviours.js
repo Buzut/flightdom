@@ -39,6 +39,17 @@ function debounce(fn, delay) {
 }
 
 /**
+ * Get current url
+ * @memberof Behaviours
+ * @param { Bool } [pathName] Whether to return only relative url without anchors and query parameters
+ * @return { String }
+ */
+function getUrl(pathName) {
+    if (pathName) return window.location.pathname;
+    return window.location.href;
+}
+
+/**
  * Navigate to a new page
  * @memberof Behaviours
  * @param { String } url
@@ -105,6 +116,7 @@ function throttle(delay, fn) {
 export {
     callFnWithElementsIfExist,
     debounce,
+    getUrl,
     navigateTo,
     scrollIn,
     scrollTo,
