@@ -120,6 +120,42 @@ function getNext(el) {
 }
 
 /**
+ * @summary Get the element's width
+ * @description There are several ways of computing an element width:
+ * layout vs rendered width and with or without the element's borders.
+ * For that matter, this functions supports offsetWidth, clientWidth, scrollWidth and getBoundingClientRect (default).
+ * getBoundingClientRect is used by default but this can by modified by providing one of the above method name
+ * @memberof Nodes
+ * @param { Element } el
+ * @param { String } [method] Specify an alternate method to use for computation
+ * @return { Number } Size in pixels
+ */
+function getWidth(el, method) {
+    if (method === 'offsetWidth') return el.offsetWidth;
+    if (method === 'clientWidth') return el.clientWidth;
+    if (method === 'scrollWidth') return el.scrollWidth;
+    return el.getBoundingClientRect().width;
+}
+
+/**
+ * @summary Get the element's height
+ * @description There are several ways of computing an element height:
+ * layout vs rendered width, with or without the element's borders.
+ * For that matter, this functions supports offsetHeight, clientHeight, scrollHeight and getBoundingClientRect (default).
+ * getBoundingClientRect is used by default but this can by modified by providing one of the above method name
+ * @memberof Nodes
+ * @param { Element } el
+ * @param { String } [method] Specify an alternate method to use for computation
+ * @return { Number } Size in pixels
+ */
+function getHeight(el, method = 'boundingClient') {
+    if (method === 'offsetHeight') return el.offsetHeight;
+    if (method === 'clientHeight') return el.clientHeight;
+    if (method === 'scrollHeight') return el.scrollHeight;
+    return el.getBoundingClientRect().height;
+}
+
+/**
  * Remove element from the DOM
  * @memberof Nodes
  * @param { Node } el
@@ -151,6 +187,8 @@ export {
     getParent,
     getPrevious,
     getNext,
+    getWidth,
+    getHeight,
     remove,
     removeChild
 };
