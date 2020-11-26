@@ -60,6 +60,11 @@ function getUrlParamValue(paramName) {
     return urlParams.get([paramName]);
 }
 
+/**
+ * Get url query string (unparsed)
+ * @memberof Behaviours
+ * @return { String }
+ */
 function getUrlQueryString() {
     return window.location.search;
 }
@@ -133,6 +138,7 @@ export {
     debounce,
     getUrl,
     getUrlParamValue,
+    getUrlQueryString,
     navigateTo,
     scrollIn,
     scrollTo,
