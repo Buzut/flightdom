@@ -39,6 +39,17 @@ function debounce(fn, delay) {
 }
 
 /**
+ * Navigate to a new page
+ * @memberof Behaviours
+ * @param { String } url
+ * @param { Bool } [redirect] Whether this is a redirect and as such, won't be saved in browser history
+ */
+function navigateTo(url, redirect) {
+    if (redirect) window.location.replace(url);
+    else window.location.assign(url);
+}
+
+/**
  * Trigger scroll to coordinates relative to the element
  * @param { Element } el Scroll to a particular set of coordinates inside a given element
  * @param { Integer } left Number of pixels along the horizontal axis of the element that will be displayed in the upper left
@@ -94,6 +105,7 @@ function throttle(delay, fn) {
 export {
     callFnWithElementsIfExist,
     debounce,
+    navigateTo,
     scrollIn,
     scrollTo,
     throttle
