@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>helpers.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/Buzut/flightdom" target="_blank" class="menu-item" id="repository" >Github repo</a></h2><h3>Namespaces</h3><ul><li><a href="Attributes.html">Attributes</a><ul class='methods'><li data-type='method' style='display: none;'><a href="Attributes.html#.addClass">addClass</a></li><li data-type='method' style='display: none;'><a href="Attributes.html#.getAttribute">getAttribute</a></li><li data-type='method' style='display: none;'><a href="Attributes.html#.hasAttribute">hasAttribute</a></li><li data-type='method' style='display: none;'><a href="Attributes.html#.hasClass">hasClass</a></li><li data-type='method' style='display: none;'><a href="Attributes.html#.removeAttribute">removeAttribute</a></li><li data-type='method' style='display: none;'><a href="Attributes.html#.removeClass">removeClass</a></li><li data-type='method' style='display: none;'><a href="Attributes.html#.setAttribute">setAttribute</a></li><li data-type='method' style='display: none;'><a href="Attributes.html#.toggleClass">toggleClass</a></li></ul></li><li><a href="Events.html">Events</a><ul class='methods'><li data-type='method' style='display: none;'><a href="Events.html#.click">click</a></li><li data-type='method' style='display: none;'><a href="Events.html#.focus">focus</a></li><li data-type='method' style='display: none;'><a href="Events.html#.getEventTarget">getEventTarget</a></li><li data-type='method' style='display: none;'><a href="Events.html#.off">off</a></li><li data-type='method' style='display: none;'><a href="Events.html#.offAll">offAll</a></li><li data-type='method' style='display: none;'><a href="Events.html#.on">on</a></li><li data-type='method' style='display: none;'><a href="Events.html#.onAll">onAll</a></li><li data-type='method' style='display: none;'><a href="Events.html#.once">once</a></li><li data-type='method' style='display: none;'><a href="Events.html#.preventDefault">preventDefault</a></li><li data-type='method' style='display: none;'><a href="Events.html#.ready">ready</a></li></ul></li><li><a href="Helpers.html">Helpers</a><ul class='methods'><li data-type='method' style='display: none;'><a href="Helpers.html#.callFnWithElementsIfExist">callFnWithElementsIfExist</a></li><li data-type='method' style='display: none;'><a href="Helpers.html#.debounce">debounce</a></li><li data-type='method' style='display: none;'><a href="Helpers.html#.exports.getWindowHeight">exports.getWindowHeight</a></li><li data-type='method' style='display: none;'><a href="Helpers.html#.exports.getWindowWidth">exports.getWindowWidth</a></li><li data-type='method' style='display: none;'><a href="Helpers.html#.getUrl">getUrl</a></li><li data-type='method' style='display: none;'><a href="Helpers.html#.getUrlParamValue">getUrlParamValue</a></li><li data-type='method' style='display: none;'><a href="Helpers.html#.getUrlQueryString">getUrlQueryString</a></li><li data-type='method' style='display: none;'><a href="Helpers.html#.navigateTo">navigateTo</a></li><li data-type='method' style='display: none;'><a href="Helpers.html#.scrollIn">scrollIn</a></li><li data-type='method' style='display: none;'><a href="Helpers.html#.scrollTo">scrollTo</a></li><li data-type='method' style='display: none;'><a href="Helpers.html#.throttle">throttle</a></li></ul></li><li><a href="Nodes.html">Nodes</a><ul class='methods'><li data-type='method' style='display: none;'><a href="Nodes.html#.append">append</a></li><li data-type='method' style='display: none;'><a href="Nodes.html#.clone">clone</a></li><li data-type='method' style='display: none;'><a href="Nodes.html#.create">create</a></li><li data-type='method' style='display: none;'><a href="Nodes.html#.find">find</a></li><li data-type='method' style='display: none;'><a href="Nodes.html#.findAll">findAll</a></li><li data-type='method' style='display: none;'><a href="Nodes.html#.findChild">findChild</a></li><li data-type='method' style='display: none;'><a href="Nodes.html#.findChildren">findChildren</a></li><li data-type='method' style='display: none;'><a href="Nodes.html#.getHeight">getHeight</a></li><li data-type='method' style='display: none;'><a href="Nodes.html#.getNext">getNext</a></li><li data-type='method' style='display: none;'><a href="Nodes.html#.getParent">getParent</a></li><li data-type='method' style='display: none;'><a href="Nodes.html#.getPrevious">getPrevious</a></li><li data-type='method' style='display: none;'><a href="Nodes.html#.getWidth">getWidth</a></li><li data-type='method' style='display: none;'><a href="Nodes.html#.insertHTML">insertHTML</a></li><li data-type='method' style='display: none;'><a href="Nodes.html#.remove">remove</a></li><li data-type='method' style='display: none;'><a href="Nodes.html#.removeChild">removeChild</a></li></ul></li><li><a href="Styles.html">Styles</a><ul class='methods'><li data-type='method' style='display: none;'><a href="Styles.html#.getStyle">getStyle</a></li><li data-type='method' style='display: none;'><a href="Styles.html#.setStyle">setStyle</a></li></ul></li><li><a href="Values.html">Values</a><ul class='methods'><li data-type='method' style='display: none;'><a href="Values.html#.getHTML">getHTML</a></li><li data-type='method' style='display: none;'><a href="Values.html#.getText">getText</a></li><li data-type='method' style='display: none;'><a href="Values.html#.getValue">getValue</a></li><li data-type='method' style='display: none;'><a href="Values.html#.isChecked">isChecked</a></li><li data-type='method' style='display: none;'><a href="Values.html#.setHTML">setHTML</a></li><li data-type='method' style='display: none;'><a href="Values.html#.setText">setText</a></li><li data-type='method' style='display: none;'><a href="Values.html#.setValue">setValue</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">helpers.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Global helper functions
+ *
+ * @namespace Helpers
+ */
+
+/**
+ * Check whether required DOM elements exist, if so, call fn with provided els
+ * @memberof Helpers
+ * @param { Function } fn Function to be called if elements exist
+ * @param { Array.&lt;HTMLElement | NodeList> } required All elements in this array are required to exist, otherwise fn won't be called
+ * @param { Array.&lt;HTMLElement | NodeList> } [optional] These are optional elements that will be passed to fn if it's called
+ */
+function callFnWithElementsIfExist(fn, required, optional = []) {
+    let call = true;
+
+    required.forEach((el) => {
+        if (!el) call = false;
+        else if (NodeList.prototype.isPrototypeOf(el) &amp;&amp; !el.length) call = false; // eslint-disable-line
+    });
+
+    if (call) fn(...required, ...optional);
+}
+
+/**
+ * Create a debounced version of the passed function
+ * @memberof Helpers
+ * @param { Function } fn Function to debounce
+ * @param { Integer } delay Delay after which it'll be executed after the last call to de debounced function
+ * @return { Function } Debounced function
+ */
+function debounce(fn, delay) {
+    let timeout;
+
+    return () => {
+        clearTimeout(timeout);
+        timeout = setTimeout(fn, delay);
+    };
+}
+
+/**
+ * Get current url
+ * @memberof Helpers
+ * @param { Bool } [pathName] Whether to return only relative url without anchors and query parameters
+ * @return { String }
+ */
+function getUrl(pathName) {
+    if (pathName) return window.location.pathname;
+    return window.location.href;
+}
+
+/**
+ * Get the viewport width
+ * @memberof Helpers
+ * @return { Number } Size in pixels
+ */
+export function getWindowWidth() {
+    return window.innerWidth;
+}
+
+/**
+ * Get the viewport height
+ * @memberof Helpers
+ * @return { Number } Size in pixels
+ */
+export function getWindowHeight() {
+    return window.innerWidth;
+}
+
+/**
+ * Get a query parameter's value
+ * @memberof Helpers
+ * @param { String } paramName Name of the parameter to get the value from
+ * @return { String }
+ */
+function getUrlParamValue(paramName) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get([paramName]);
+}
+
+/**
+ * Get url query string (unparsed)
+ * @memberof Helpers
+ * @return { String }
+ */
+function getUrlQueryString() {
+    return window.location.search;
+}
+
+/**
+ * Navigate to a new page
+ * @memberof Helpers
+ * @param { String } url
+ * @param { Bool } [redirect] Whether this is a redirect and as such, won't be saved in browser history
+ */
+function navigateTo(url, redirect) {
+    if (redirect) window.location.replace(url);
+    else window.location.assign(url);
+}
+
+/**
+ * Trigger scroll to coordinates relative to the element
+ * @param { Element } el Scroll to a particular set of coordinates inside a given element
+ * @param { Integer } left Number of pixels along the horizontal axis of the element that will be displayed in the upper left
+ * @param { Integer } top Number of pixels along the vertical axis of the element that will be displayed in the upper left
+ * @param { Bool } smooth Whether the scrolling should animate smoothly
+ * @memberof Helpers
+ */
+function scrollIn(el, left, top, smooth) {
+    if (smooth) el.scrollTo({ left, top, behavior: 'smooth' });
+    else el.scrollTo();
+}
+
+/**
+ * Trigger scroll to the element
+ * @param { Element } el Scroll untill the element is at the top of the viewport (like clicking an anchor tag)
+ * @param { Bool } smooth Whether the scrolling should animate smoothly
+ * @memberof Helpers
+ */
+function scrollTo(el, smooth) {
+    if (smooth) el.scrollIntoView({ behavior: 'smooth' });
+    else el.scrollIntoView();
+}
+
+/**
+ * Create a thottled version of the passed function
+ * @memberof Helpers
+ * @param { Function } fn Function to throttle
+ * @param { Integer } delay Minimum allowed interval of time between two calls of the function
+ * @return { Function } Throttled function
+ */
+function throttle(delay, fn) {
+    let wait = false;
+    let toExec;
+
+    return () => {
+        if (wait) {
+            if (toExec) clearTimeout(toExec);
+
+            toExec = setTimeout(fn, delay);
+            return;
+        }
+
+        if (toExec) clearTimeout(toExec);
+        fn();
+        wait = true;
+
+        setTimeout(() => {
+            wait = false;
+        }, delay);
+    };
+}
+
+export {
+    callFnWithElementsIfExist,
+    debounce,
+    getUrl,
+    getUrlParamValue,
+    getUrlQueryString,
+    navigateTo,
+    scrollIn,
+    scrollTo,
+    throttle
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> on Fri Nov 27 2020 16:56:15 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+<script src="scripts/collapse.js" defer></script>
+
+
+</body>
+</html>

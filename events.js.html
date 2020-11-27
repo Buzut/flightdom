@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>events.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/Buzut/flightdom" target="_blank" class="menu-item" id="repository" >Github repo</a></h2><h3>Namespaces</h3><ul><li><a href="Attributes.html">Attributes</a><ul class='methods'><li data-type='method' style='display: none;'><a href="Attributes.html#.addClass">addClass</a></li><li data-type='method' style='display: none;'><a href="Attributes.html#.getAttribute">getAttribute</a></li><li data-type='method' style='display: none;'><a href="Attributes.html#.hasAttribute">hasAttribute</a></li><li data-type='method' style='display: none;'><a href="Attributes.html#.hasClass">hasClass</a></li><li data-type='method' style='display: none;'><a href="Attributes.html#.removeAttribute">removeAttribute</a></li><li data-type='method' style='display: none;'><a href="Attributes.html#.removeClass">removeClass</a></li><li data-type='method' style='display: none;'><a href="Attributes.html#.setAttribute">setAttribute</a></li><li data-type='method' style='display: none;'><a href="Attributes.html#.toggleClass">toggleClass</a></li></ul></li><li><a href="Events.html">Events</a><ul class='methods'><li data-type='method' style='display: none;'><a href="Events.html#.click">click</a></li><li data-type='method' style='display: none;'><a href="Events.html#.focus">focus</a></li><li data-type='method' style='display: none;'><a href="Events.html#.getEventTarget">getEventTarget</a></li><li data-type='method' style='display: none;'><a href="Events.html#.off">off</a></li><li data-type='method' style='display: none;'><a href="Events.html#.offAll">offAll</a></li><li data-type='method' style='display: none;'><a href="Events.html#.on">on</a></li><li data-type='method' style='display: none;'><a href="Events.html#.onAll">onAll</a></li><li data-type='method' style='display: none;'><a href="Events.html#.once">once</a></li><li data-type='method' style='display: none;'><a href="Events.html#.preventDefault">preventDefault</a></li><li data-type='method' style='display: none;'><a href="Events.html#.ready">ready</a></li></ul></li><li><a href="Helpers.html">Helpers</a><ul class='methods'><li data-type='method' style='display: none;'><a href="Helpers.html#.callFnWithElementsIfExist">callFnWithElementsIfExist</a></li><li data-type='method' style='display: none;'><a href="Helpers.html#.debounce">debounce</a></li><li data-type='method' style='display: none;'><a href="Helpers.html#.exports.getWindowHeight">exports.getWindowHeight</a></li><li data-type='method' style='display: none;'><a href="Helpers.html#.exports.getWindowWidth">exports.getWindowWidth</a></li><li data-type='method' style='display: none;'><a href="Helpers.html#.getUrl">getUrl</a></li><li data-type='method' style='display: none;'><a href="Helpers.html#.getUrlParamValue">getUrlParamValue</a></li><li data-type='method' style='display: none;'><a href="Helpers.html#.getUrlQueryString">getUrlQueryString</a></li><li data-type='method' style='display: none;'><a href="Helpers.html#.navigateTo">navigateTo</a></li><li data-type='method' style='display: none;'><a href="Helpers.html#.scrollIn">scrollIn</a></li><li data-type='method' style='display: none;'><a href="Helpers.html#.scrollTo">scrollTo</a></li><li data-type='method' style='display: none;'><a href="Helpers.html#.throttle">throttle</a></li></ul></li><li><a href="Nodes.html">Nodes</a><ul class='methods'><li data-type='method' style='display: none;'><a href="Nodes.html#.append">append</a></li><li data-type='method' style='display: none;'><a href="Nodes.html#.clone">clone</a></li><li data-type='method' style='display: none;'><a href="Nodes.html#.create">create</a></li><li data-type='method' style='display: none;'><a href="Nodes.html#.find">find</a></li><li data-type='method' style='display: none;'><a href="Nodes.html#.findAll">findAll</a></li><li data-type='method' style='display: none;'><a href="Nodes.html#.findChild">findChild</a></li><li data-type='method' style='display: none;'><a href="Nodes.html#.findChildren">findChildren</a></li><li data-type='method' style='display: none;'><a href="Nodes.html#.getHeight">getHeight</a></li><li data-type='method' style='display: none;'><a href="Nodes.html#.getNext">getNext</a></li><li data-type='method' style='display: none;'><a href="Nodes.html#.getParent">getParent</a></li><li data-type='method' style='display: none;'><a href="Nodes.html#.getPrevious">getPrevious</a></li><li data-type='method' style='display: none;'><a href="Nodes.html#.getWidth">getWidth</a></li><li data-type='method' style='display: none;'><a href="Nodes.html#.insertHTML">insertHTML</a></li><li data-type='method' style='display: none;'><a href="Nodes.html#.remove">remove</a></li><li data-type='method' style='display: none;'><a href="Nodes.html#.removeChild">removeChild</a></li></ul></li><li><a href="Styles.html">Styles</a><ul class='methods'><li data-type='method' style='display: none;'><a href="Styles.html#.getStyle">getStyle</a></li><li data-type='method' style='display: none;'><a href="Styles.html#.setStyle">setStyle</a></li></ul></li><li><a href="Values.html">Values</a><ul class='methods'><li data-type='method' style='display: none;'><a href="Values.html#.getHTML">getHTML</a></li><li data-type='method' style='display: none;'><a href="Values.html#.getText">getText</a></li><li data-type='method' style='display: none;'><a href="Values.html#.getValue">getValue</a></li><li data-type='method' style='display: none;'><a href="Values.html#.isChecked">isChecked</a></li><li data-type='method' style='display: none;'><a href="Values.html#.setHTML">setHTML</a></li><li data-type='method' style='display: none;'><a href="Values.html#.setText">setText</a></li><li data-type='method' style='display: none;'><a href="Values.html#.setValue">setValue</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">events.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Event related functions
+ *
+ * @namespace Events
+ */
+
+/**
+  * Trigger a click event on the specified element
+  * @memberof Events
+  * @param { HTMLElement } el
+  */
+function click(el) {
+    el.click();
+}
+
+/**
+  * Set focus on the specified element
+  * @memberof Events
+  * @param { HTMLElement } el
+  */
+function focus(el) {
+    el.focus();
+}
+
+/**
+  * Return target event
+  * @memberof Events
+  * @param { Event } e
+  * @return { EventTarget }
+  */
+function getEventTarget(e) {
+    return e.target;
+}
+
+/**
+ * @summary Set an event listener on an element
+ * @description Most of the time on, off, all and once will be used with one of Element, Window or XMLHttpRequest
+ * But other DOM objects (like AudioContext) implement EventTarget interface (addEventListener is used under the hood) and can be valid parameters
+ * @memberof Events
+ * @param { Element | Document | Window | XMLHttpRequest } el
+ * @param { String } action The event to listen to
+ * @param { Function } fn Function to execute when event triggers
+ */
+function on(el, action, fn) {
+    el.addEventListener(action, fn);
+}
+
+/**
+ * @summary Set an event listener that triggers once on an element
+ * @description Most of the time on, off, all and once will be used with one of Element, Window or XMLHttpRequest
+ * But other DOM objects (like AudioContext) implement EventTarget interface (addEventListener is used under the hood) and can be valid parameters
+ * @memberof Events
+ * @param { Element | Document | Window | XMLHttpRequest } el
+ * @param { String } action The event to listen to
+ * @param { Function } fn Function to execute when event triggers
+ */
+function once(el, action, fn) {
+    el.addEventListener(action, fn, { once: true });
+}
+
+/**
+ * @summary Remove an event listener from an element
+ * @description Most of the time on, off, all and once will be used with one of Element, Window or XMLHttpRequest
+ * But other DOM objects (like AudioContext) implement EventTarget interface (addEventListener is used under the hood) and can be valid parameters
+ * @memberof Events
+ * @param { Element | Document | Window | XMLHttpRequest } el
+ * @param { String } action The event to remove
+ * @param { Function } fn Function to remove on the given event
+ */
+function off(el, action, fn) {
+    el.removeEventListener(action, fn);
+}
+
+/**
+ * Set an event listener on a collection of elements
+ * @memberof Events
+ * @param { Array.&lt;Element | Document | Window | XMLHttpRequest> | NodeList.&lt;Element | Document | Window | XMLHttpRequest> } els
+ * @param { String } action The event to listen to
+ * @param { Function } fn Function to execute when event triggers
+ */
+function onAll(els, action, fn) {
+    els.forEach(el => on(el, action, fn));
+}
+
+/**
+ * Remove an event listener from a collection of elements
+ * @memberof Events
+ * @param { Array.&lt;Element | Document | Window | XMLHttpRequest> | NodeList.&lt;Element | Document | Window | XMLHttpRequest> } els
+ * @param { String } action The event to remove
+ * @param { Function } fn Function to remove on the given event
+ */
+function offAll(els, action, fn) {
+    els.forEach(el => off(el, action, fn));
+}
+
+/**
+  * Prevent default event from happening
+  * @memberof Events
+  * @param { Event } e
+  */
+function preventDefault(e) {
+    e.preventDefault();
+}
+
+/**
+ * Trigger a function when DOM is ready
+ * @memberof Events
+ * @param { Function }
+ */
+function ready(fn) {
+    if (document.readyState !== 'loading') fn();
+    else on(document, 'DOMContentLoaded', fn);
+}
+
+export {
+    click,
+    focus,
+    getEventTarget,
+    on,
+    once,
+    off,
+    onAll,
+    offAll,
+    preventDefault,
+    ready
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> on Fri Nov 27 2020 16:56:15 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+<script src="scripts/collapse.js" defer></script>
+
+
+</body>
+</html>
