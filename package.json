@@ -9,7 +9,7 @@
     "lib"
   ],
   "scripts": {
-    "prepare": "test -d .git && cd .git/hooks/ && curl -O https://raw.githubusercontent.com/Buzut/git-emojis-hook/master/commit-msg && curl -O https://raw.githubusercontent.com/Buzut/git-emojis-hook/master/prepare-commit-msg && chmod +x * || exit 0",
+    "prepare": "test -d .git && test -x .git && cd .git/hooks/ && curl -O https://raw.githubusercontent.com/Buzut/git-emojis-hook/master/commit-msg && curl -O https://raw.githubusercontent.com/Buzut/git-emojis-hook/master/prepare-commit-msg && chmod +x * || exit 0",
     "docs": "jsdoc -a all -c jsdoc.config.json src -R README.md -d docs",
     "build": "rollup -c",
     "prepublishOnly": "npm run build"
