@@ -120,6 +120,28 @@ function getNext(el) {
 }
 
 /**
+ * Get the element's coordinates (one side or all sides at once)
+ * @memberof Nodes
+ * @param { Element } el
+ * @param { String("top", "right", "bottom", "left") } [side] Specify the side of which to get the coordinate, or omit the parameter to get an object with all sides
+ * @return { Number | Object } Coordinates in pixels
+ */
+function getCoordinates(el, angle) {
+    const rect = el.getBoundingClientRect();
+    if (angle === 'top') return rect.top;
+    if (angle === 'bottom') return rect.bottom;
+    if (angle === 'left') return rect.left;
+    if (angle === 'right') return rect.right;
+
+    return {
+        top: rect.top,
+        right: rect.right,
+        bottom: rect.bottom,
+        left: rect.left
+    };
+}
+
+/**
  * @summary Get the element's width
  * @description There are several ways of computing an element width:
  * layout vs rendered width and with or without the element's borders.
@@ -187,6 +209,7 @@ export {
     getParent,
     getPrevious,
     getNext,
+    getCoordinates,
     getWidth,
     getHeight,
     remove,
