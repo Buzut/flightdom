@@ -23,18 +23,36 @@ function callFnWithElementsIfExist(fn, required, optional = []) {
 }
 
 /**
- * Create a debounced version of the passed function
+ * @summary Create a debounced version of the passed function
+ * @description Function to execute and timeout can be passed either at init or at call time and can be redefined
  * @memberof Helpers
- * @param { Function } fn Function to debounce
- * @param { Integer } delay Delay after which it'll be executed after the last call to de debounced function
+ * @param { Function } [fn] Function to debounce
+ * @param { Integer } [delay] Delay after which it'll be executed after the last call to de debounced function
  * @return { Function } Debounced function
+ * @example
+ * const debouncedFn = debounce(testingFunction, 500);
+ *
+ * // This function can be called any time
+ * debouncedFn();
+ *
+ * // It can also be redefined
+ * debouncedFn(anotherTestingFn); // will execute anotherTestingFn instead of testingFunction if this call is the last
+ * debouncedFn(anotherTestingFn, 800); // either fn or both fn and delay can be overriden at call time
+ *
+ * // Unless it's called again w/o params, in this case, the params provided at init will be used
+ * debouncedFn(); // Will exec testingFunction after 500ms
+ *
+ * // Can also be canceled
+ * clearTiemout(debouncedFn);
  */
-function debounce(fn, delay) {
-    let timeout;
+function debounce(fn, delay) { // eslint-disable-line
+    let timer;
 
-    return () => {
-        clearTimeout(timeout);
-        timeout = setTimeout(fn, delay);
+    return (finalFn = fn, finalDelay = delay) => { // eslint-disable-line
+        if (!finalFn || !finalDelay) throw new TypeError('A function and a delay must be provided');
+        clearTimeout(timer);
+        timer = setTimeout(finalFn, finalDelay);
+        return timer;
     };
 }
 
