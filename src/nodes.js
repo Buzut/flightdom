@@ -19,11 +19,11 @@ function append(parent, ...child) {
  * Clone the provided node
  * @memberof Nodes
  * @param { Node } el Node to be cloned
- * @param { Bool } [shallow=false]
+ * @param { Bool } [deep=true]
  * @return { Node }
  */
-function clone(el, shallow = false) {
-    return el.cloneNode(shallow);
+function clone(el, deep = true) {
+    return el.cloneNode(deep);
 }
 
 /**
