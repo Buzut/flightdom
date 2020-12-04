@@ -343,8 +343,10 @@
 
     
 
-    <h4 class="name" id=".debounce"><span class="type-signature">(static) </span>debounce<span class="signature">(fn, delay)</span><span class="type-signature"> &rarr; {function}</span></h4>
+    <h4 class="name" id=".debounce"><span class="type-signature">(static) </span>debounce<span class="signature">(fn<span class="signature-attributes">opt</span>, delay<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {function}</span></h4>
 
+    
+    <p class="summary usertext">Create a debounced version of the passed function</p>
     
 
 
@@ -355,7 +357,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="helpers.js.html">helpers.js</a>, <a href="helpers.js.html#line32">line 32</a>
+        <a href="helpers.js.html">helpers.js</a>, <a href="helpers.js.html#line48">line 48</a>
     </li></ul></dd>
     
 
@@ -395,7 +397,7 @@
 
 
 <div class="description usertext">
-    Create a debounced version of the passed function
+    Function to execute and timeout can be passed either at init or at call time and can be redefined
 </div>
 
 
@@ -404,6 +406,24 @@
 
 
 
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const debouncedFn = debounce(testingFunction, 500);
+
+// This function can be called any time
+debouncedFn();
+
+// It can also be redefined
+debouncedFn(anotherTestingFn); // will execute anotherTestingFn instead of testingFunction if this call is the last
+debouncedFn(anotherTestingFn, 800); // either fn or both fn and delay can be overriden at call time
+
+// Unless it's called again w/o params, in this case, the params provided at init will be used
+debouncedFn(); // Will exec testingFunction after 500ms
+
+// Can also be canceled
+clearTiemout(debouncedFn);</code></pre>
 
 
 
@@ -420,6 +440,8 @@
 
         <th>Type</th>
 
+        
+        <th>Attributes</th>
         
 
         
@@ -446,6 +468,16 @@
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
 
             
 
@@ -468,6 +500,16 @@
             
             </td>
 
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
             
 
             
@@ -536,7 +578,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="helpers.js.html">helpers.js</a>, <a href="helpers.js.html#line66">line 66</a>
+        <a href="helpers.js.html">helpers.js</a>, <a href="helpers.js.html#line84">line 84</a>
     </li></ul></dd>
     
 
@@ -645,7 +687,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="helpers.js.html">helpers.js</a>, <a href="helpers.js.html#line57">line 57</a>
+        <a href="helpers.js.html">helpers.js</a>, <a href="helpers.js.html#line75">line 75</a>
     </li></ul></dd>
     
 
@@ -754,7 +796,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="helpers.js.html">helpers.js</a>, <a href="helpers.js.html#line47">line 47</a>
+        <a href="helpers.js.html">helpers.js</a>, <a href="helpers.js.html#line65">line 65</a>
     </li></ul></dd>
     
 
@@ -920,7 +962,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="helpers.js.html">helpers.js</a>, <a href="helpers.js.html#line76">line 76</a>
+        <a href="helpers.js.html">helpers.js</a>, <a href="helpers.js.html#line94">line 94</a>
     </li></ul></dd>
     
 
@@ -1074,7 +1116,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="helpers.js.html">helpers.js</a>, <a href="helpers.js.html#line86">line 86</a>
+        <a href="helpers.js.html">helpers.js</a>, <a href="helpers.js.html#line104">line 104</a>
     </li></ul></dd>
     
 
@@ -1179,7 +1221,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="helpers.js.html">helpers.js</a>, <a href="helpers.js.html#line96">line 96</a>
+        <a href="helpers.js.html">helpers.js</a>, <a href="helpers.js.html#line114">line 114</a>
     </li></ul></dd>
     
 
@@ -1358,7 +1400,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="helpers.js.html">helpers.js</a>, <a href="helpers.js.html#line109">line 109</a>
+        <a href="helpers.js.html">helpers.js</a>, <a href="helpers.js.html#line127">line 127</a>
     </li></ul></dd>
     
 
@@ -1563,7 +1605,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="helpers.js.html">helpers.js</a>, <a href="helpers.js.html#line120">line 120</a>
+        <a href="helpers.js.html">helpers.js</a>, <a href="helpers.js.html#line138">line 138</a>
     </li></ul></dd>
     
 
@@ -1722,7 +1764,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="helpers.js.html">helpers.js</a>, <a href="helpers.js.html#line132">line 132</a>
+        <a href="helpers.js.html">helpers.js</a>, <a href="helpers.js.html#line150">line 150</a>
     </li></ul></dd>
     
 
@@ -1906,7 +1948,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> on Fri Dec 04 2020 10:57:40 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> on Fri Dec 04 2020 16:29:28 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>
