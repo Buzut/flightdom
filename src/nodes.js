@@ -149,7 +149,7 @@ function getCoordinates(el, angle) {
  * getBoundingClientRect is used by default but this can by modified by providing one of the above method name
  * @memberof Nodes
  * @param { Element } el
- * @param { String } [method] Specify an alternate method to use for computation
+ * @param { String("offsetWidth", "clientWidth", "scrollWidth", "getBoundingClientRect") } [method] Specify an alternate method to use for computation
  * @return { Number } Size in pixels
  */
 function getWidth(el, method) {
@@ -167,7 +167,7 @@ function getWidth(el, method) {
  * getBoundingClientRect is used by default but this can by modified by providing one of the above method name
  * @memberof Nodes
  * @param { Element } el
- * @param { String } [method] Specify an alternate method to use for computation
+ * @param { String("offsetWidth", "clientWidth", "scrollWidth", "getBoundingClientRect") } [method] Specify an alternate method to use for computation
  * @return { Number } Size in pixels
  */
 function getHeight(el, method = 'boundingClient') {
