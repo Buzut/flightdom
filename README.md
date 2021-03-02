@@ -4,7 +4,7 @@
 
 * [Why](#why)
 * [Getting started](#usage)
-* [API documentation](https://buzut.github.io/flightdom/global.html)
+* [API documentation](https://buzut.github.io/flightdom/)
 
 ## <name id="why"/> Why use it?
 Let's admit it, we've dropped jQuery but we sometimes miss it. DOM's native API is very verbose and cumbersome to work with.
