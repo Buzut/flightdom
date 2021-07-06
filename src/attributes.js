@@ -5,13 +5,13 @@
  */
 
 /**
- * Add a class to an element
+ * Add one or more classes to an element
  * @memberof Attributes
  * @param { Element } el
- * @param { String } className
+ * @param { ...String } className
  */
-function addClass(el, className) {
-    el.classList.add(className);
+function addClass(el, ...className) {
+    el.classList.add(...className);
 }
 
 /**
