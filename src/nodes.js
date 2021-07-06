@@ -16,6 +16,17 @@ function append(parent, ...child) {
 }
 
 /**
+ * Prepend one or more elements to a parent node
+ * @memberof Nodes
+ * @param { ParentNode } parent
+ * @param { ...Node | ...String } child
+ * @return { Node }
+ */
+ function prepend(parent, ...child) {
+    return parent.prepend(child);
+}
+
+/**
  * Clone the provided node
  * @memberof Nodes
  * @param { Node } el Node to be cloned
