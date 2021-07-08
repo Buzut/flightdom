@@ -12,7 +12,7 @@
  * @return { Node }
  */
 function append(parent, ...child) {
-    return parent.append(child);
+    return parent.append(...child);
 }
 
 /**
@@ -22,8 +22,8 @@ function append(parent, ...child) {
  * @param { ...Node | ...String } child
  * @return { Node }
  */
- function prepend(parent, ...child) {
-    return parent.prepend(child);
+function prepend(parent, ...child) {
+    return parent.prepend(...child);
 }
 
 /**
@@ -210,6 +210,7 @@ function removeChild(parent, child) {
 
 export {
     append,
+    prepend,
     clone,
     create,
     insertHTML,
