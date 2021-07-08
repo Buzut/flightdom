@@ -1,6 +1,6 @@
 {
   "name": "flightdom",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "ƒlightDom is a super lightweight functional API to work with the DOM.",
   "main": "lib/index.js",
   "module": "src/index.js",
