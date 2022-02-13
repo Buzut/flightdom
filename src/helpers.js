@@ -5,6 +5,39 @@
  */
 
 /**
+ * Send XMLHttpRequest and call either error or success callback
+ * @memberof Helpers
+ * @param { String } method
+ * @param { String } url
+ * @param { (Object | Null) } body
+ * @param { Function } errCallback
+ * @param { Function } successCallback
+ */
+function ajax(method, url, body, errCallback, successCallback) {
+    const xhr = new XMLHttpRequest();
+    const form = body ? new FormData() : null;
+
+    xhr.onload = () => {
+        if (xhr.status !== 200) {
+            errCallback(xhr.status);
+            return;
+        }
+
+        successCallback(xhr.response);
+    };
+
+    xhr.onerror = errCallback;
+    xhr.open(method, url);
+
+    if (body) {
+        Object.keys(body).forEach(key => form.append(key, body[key]));
+        xhr.send(form);
+    }
+
+    else xhr.send();
+}
+
+/**
  * Check whether required DOM elements exist, if so, call fn with provided els
  * @memberof Helpers
  * @param { Function } fn Function to be called if elements exist
@@ -170,6 +203,7 @@ function throttle(delay, fn) {
 }
 
 export {
+    ajax,
     callFnWithElementsIfExist,
     debounce,
     getUrl,
