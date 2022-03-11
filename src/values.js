@@ -28,10 +28,12 @@ function setText(el, text) {
  * Get a node's html
  * @memberof Values
  * @param { Element } el
+ * @param { String="inner, outer" } [position=inner]
  * @return { String }
  */
-function getHTML(el) {
-    return el.innerHTML;
+function getHTML(el, position = 'inner') {
+    if (position === 'inner') return el.innerHTML;
+    return el.outerHTML;
 }
 
 /**
