@@ -101,11 +101,34 @@ function getUrl(pathName) {
 }
 
 /**
+ * Get a cookie by name
+ * @memberof Helpers
+ * @param { String } name Cookie name
+ * @return { String }
+ */
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+}
+
+/**
+ * Set or update a cookie
+ * @memberof Helpers
+ * @param { String } name Cookie name in ASCII
+ * @param { String } val Cookie value as a key=value string with ";" separator
+ * @return { String }
+ */
+function setCookie(name, val) {
+    document.cookie = `${name}=${val}`;
+}
+
+/**
  * Get the viewport width
  * @memberof Helpers
  * @return { Number } Size in pixels
  */
-export function getWindowWidth() {
+function getWindowWidth() {
     return window.innerWidth;
 }
 
@@ -114,7 +137,7 @@ export function getWindowWidth() {
  * @memberof Helpers
  * @return { Number } Size in pixels
  */
-export function getWindowHeight() {
+function getWindowHeight() {
     return window.innerWidth;
 }
 
@@ -206,10 +229,14 @@ export {
     ajax,
     callFnWithElementsIfExist,
     debounce,
+    getCookie,
     getUrl,
     getUrlParamValue,
     getUrlQueryString,
+    getWindowWidth,
+    getWindowHeight,
     navigateTo,
+    setCookie,
     scrollIn,
     scrollTo,
     throttle
